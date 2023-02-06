@@ -44,21 +44,29 @@ namespace Dieta.UI
                     {
                         if (context.Users.Where(u => u.Username == username).FirstOrDefault() == null)
                         {
-                            if (txtPassword.Text == txtRePassword.Text)
+                            if (DietaController.CheckPasswordRules(password))
                             {
-                                User = new User();
-                                User.Username = username;
-                                User.Password = DietaController.PasswordHash(password);
-                                User.Fullname = txtFullname.Text;
-                                User.Email = email;
-                                SignUpDetailsForm signUpDetailsForm = new SignUpDetailsForm(User);
-                                signUpDetailsForm.Show();
-                                this.Hide();
+                                if (txtPassword.Text == txtRePassword.Text)
+                                {
+                                    User = new User();
+                                    User.Username = username;
+                                    User.Password = DietaController.PasswordHash(password);
+                                    User.Fullname = txtFullname.Text;
+                                    User.Email = email;
+                                    SignUpDetailsForm signUpDetailsForm = new SignUpDetailsForm(User);
+                                    signUpDetailsForm.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("The entered passwords do not match! Please enter the same values ​​in both boxes.");
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("The entered passwords do not match! Please enter the same values ​​in both boxes.");
+                                MessageBox.Show("Your password does not comply with the password rules. Please set a password that complies with the password rules.");
                             }
+                            
                         }
                         else
                         {

@@ -1529,6 +1529,353 @@ namespace Dieta.DAL.DBInitiliazers
             }
             #endregion
 
+            #region AddExercise
+            List<Exercise> exercises = new List<Exercise>()
+            {
+                 new Exercise()
+            {
+                ExerciseName = "Walking (Medium Pace)",
+                BurnCaloriesPerMinute = 3.3
+            },
+                 new Exercise()
+            {
+                ExerciseName = "Gymnastics (Light, E.g. Home Exercise)",
+                BurnCaloriesPerMinute = 3.48
+            },
+                 new Exercise()
+            {
+                ExerciseName = "Swimming",
+                BurnCaloriesPerMinute = 3.98
+            },
+                 new Exercise()
+            {
+                ExerciseName = "Cycling",
+                BurnCaloriesPerMinute =3.98
+            },
+                 new Exercise()
+            {
+                ExerciseName = "Golf (on foot)",
+                BurnCaloriesPerMinute =3.98
+            },
+                 new Exercise()
+            {
+                ExerciseName = "Table Tennis",
+                BurnCaloriesPerMinute =3.98
+            },
+                 new Exercise()
+            {
+                ExerciseName = "Dance (Slow Step)",
+                BurnCaloriesPerMinute =3.98
+            },
+                 new Exercise()
+            {
+                ExerciseName = "Volleyball",
+                BurnCaloriesPerMinute =3.98
+            },
+                 new Exercise()
+            {
+                ExerciseName = "Motor Ride",
+                BurnCaloriesPerMinute =3.98
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Bovling",
+                BurnCaloriesPerMinute =3.98
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Horse riding",
+                BurnCaloriesPerMinute =3.98
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Hunting",
+                BurnCaloriesPerMinute =4.98
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Gym Exercises",
+                BurnCaloriesPerMinute =5.48
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Walk",
+                BurnCaloriesPerMinute =5.98
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Weight Training (Intermediate)",
+                BurnCaloriesPerMinute =5.98
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Basketball",
+                BurnCaloriesPerMinute =5.98
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Circular Operation",
+                BurnCaloriesPerMinute =5.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Circular Operation",
+                BurnCaloriesPerMinute =5.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Tree Climbing",
+                BurnCaloriesPerMinute =5.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Aerobic",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Insanity",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Judo",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Karate",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Cardio",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Kick box",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Leslie",
+                BurnCaloriesPerMinute = 6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Stair Climbing",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Zumba",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Fitness (Exercise)",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Bale",
+                BurnCaloriesPerMinute =6.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Football",
+                BurnCaloriesPerMinute = 7.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Squat",
+                BurnCaloriesPerMinute = 7.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Tennis",
+                BurnCaloriesPerMinute = 7.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Rowing Sport",
+                BurnCaloriesPerMinute = 7.98
+            },
+                new Exercise()
+            {
+                ExerciseName = "Skipping rope",
+                BurnCaloriesPerMinute = 9.96
+            },
+                new Exercise()
+            {
+                ExerciseName = "Running - 11/kph",
+                BurnCaloriesPerMinute = 11.46
+            },
+                new Exercise()
+            {
+                ExerciseName = "Hatha Yoga",
+                BurnCaloriesPerMinute = 3.8
+            },
+                new Exercise()
+            {
+                ExerciseName = "A Light Walk",
+                BurnCaloriesPerMinute = 4.25
+            },
+                new Exercise()
+            {
+                ExerciseName = "Bowling",
+                BurnCaloriesPerMinute = 4.55
+            },
+                new Exercise()
+            {
+                ExerciseName = "Ballroom Dancing",
+                BurnCaloriesPerMinute = 4.55
+            },
+                new Exercise()
+            {
+                ExerciseName = "Tai Chi",
+                BurnCaloriesPerMinute = 4.55
+            },
+                new Exercise()
+            {
+                ExerciseName = "Canoe",
+                BurnCaloriesPerMinute = 5.32
+            },
+                new Exercise()
+            {
+                ExerciseName = "A Light Bike Ride",
+                BurnCaloriesPerMinute = 6
+            },
+                new Exercise()
+            {
+                ExerciseName = "Volleyball",
+                BurnCaloriesPerMinute = 6
+            },
+                new Exercise()
+            {
+                ExerciseName = " Power Yoga (Athletic Yoga)",
+                BurnCaloriesPerMinute = 6
+            },
+                new Exercise()
+            {
+                ExerciseName = "   Golf (carrying your clubs)",
+                BurnCaloriesPerMinute = 6.5
+            },
+                 new Exercise()
+            {
+                ExerciseName = "Ski (Descent)",
+                BurnCaloriesPerMinute = 6.5
+            },
+                 new Exercise()
+            {
+                ExerciseName = "   Brisk walking",
+                BurnCaloriesPerMinute = 6.5
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Low Impact Aerobics ",
+                BurnCaloriesPerMinute = 7.6
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Elliptical bike",
+                BurnCaloriesPerMinute = 7.6
+            },
+                  new Exercise()
+            {
+                ExerciseName = " Baseball / Softball ",
+                BurnCaloriesPerMinute = 7.6
+            },
+                  new Exercise()
+            {
+                ExerciseName = " Resistance training / weight lifting",
+                BurnCaloriesPerMinute = 7.6
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Aerobic Exercises in Water",
+                BurnCaloriesPerMinute = 8.3
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Light or moderate swimming",
+                BurnCaloriesPerMinute = 8.8
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Hiking",
+                BurnCaloriesPerMinute = 9.1
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Rowing exerciser",
+                BurnCaloriesPerMinute = 9.1
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Water skiing ",
+                BurnCaloriesPerMinute = 9.1
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Cross-country skiing",
+                BurnCaloriesPerMinute = 10.3
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Hiking with a backpack",
+                BurnCaloriesPerMinute = 10.6
+            },
+                  new Exercise()
+            {
+                ExerciseName = "Ice skating",
+                BurnCaloriesPerMinute = 10.6
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Racquetball",
+                BurnCaloriesPerMinute = 10.6
+            },
+                   new Exercise()
+            {
+                ExerciseName = "High-impact aerobics ",
+                BurnCaloriesPerMinute = 11
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Skating",
+                BurnCaloriesPerMinute = 11.3
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Flag Football ",
+                BurnCaloriesPerMinute = 12.1
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Tennis (singles)",
+                BurnCaloriesPerMinute = 12.1
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Running (8 km/h)",
+                BurnCaloriesPerMinute = 12.5
+            },
+                   new Exercise()
+            {
+                ExerciseName = "Taekwondo",
+                BurnCaloriesPerMinute = 15.6
+            }
+            };
+
+            for (int i = 0; i < exercises.Count; i++)
+            {
+                context.Exercises.Add(exercises[i]);
+            }
+
+            #endregion
+
             context.SaveChanges();
         }
     }

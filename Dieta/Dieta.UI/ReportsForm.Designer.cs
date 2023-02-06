@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportsForm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControlReports = new System.Windows.Forms.TabControl();
             this.DailyReport = new System.Windows.Forms.TabPage();
+            this.btnBackToPersonalMain = new System.Windows.Forms.Button();
             this.btnGetReport = new System.Windows.Forms.Button();
             this.dgvDinner = new System.Windows.Forms.DataGridView();
             this.dgvSnacks = new System.Windows.Forms.DataGridView();
@@ -57,7 +58,18 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbReports = new System.Windows.Forms.ComboBox();
-            this.btnBackToPersonalMain = new System.Windows.Forms.Button();
+            this.DetailedReports = new System.Windows.Forms.TabPage();
+            this.btnGetChoice = new System.Windows.Forms.Button();
+            this.dgvSnacksDetails = new System.Windows.Forms.DataGridView();
+            this.dgvDinnerDetails = new System.Windows.Forms.DataGridView();
+            this.dgvLunchDetails = new System.Windows.Forms.DataGridView();
+            this.dgvBreakfastDetails = new System.Windows.Forms.DataGridView();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbMakeYourChoice = new System.Windows.Forms.ComboBox();
             this.tabControlReports.SuspendLayout();
             this.DailyReport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDinner)).BeginInit();
@@ -67,12 +79,18 @@
             this.Charts.SuspendLayout();
             this.groupBoxChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.DetailedReports.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSnacksDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDinnerDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLunchDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBreakfastDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlReports
             // 
             this.tabControlReports.Controls.Add(this.DailyReport);
             this.tabControlReports.Controls.Add(this.Charts);
+            this.tabControlReports.Controls.Add(this.DetailedReports);
             this.tabControlReports.Location = new System.Drawing.Point(1, 1);
             this.tabControlReports.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlReports.Name = "tabControlReports";
@@ -109,6 +127,17 @@
             this.DailyReport.TabIndex = 1;
             this.DailyReport.Text = "Daily Calories Report";
             this.DailyReport.UseVisualStyleBackColor = true;
+            // 
+            // btnBackToPersonalMain
+            // 
+            this.btnBackToPersonalMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBackToPersonalMain.Image = ((System.Drawing.Image)(resources.GetObject("btnBackToPersonalMain.Image")));
+            this.btnBackToPersonalMain.Location = new System.Drawing.Point(12, 450);
+            this.btnBackToPersonalMain.Name = "btnBackToPersonalMain";
+            this.btnBackToPersonalMain.Size = new System.Drawing.Size(56, 38);
+            this.btnBackToPersonalMain.TabIndex = 56;
+            this.btnBackToPersonalMain.UseVisualStyleBackColor = false;
+            this.btnBackToPersonalMain.Click += new System.EventHandler(this.btnBackToPersonalMain_Click);
             // 
             // btnGetReport
             // 
@@ -297,17 +326,17 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(6, 22);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Chart";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Chart";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(729, 350);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "Weight Chart";
@@ -323,6 +352,7 @@
             // 
             // cmbReports
             // 
+            this.cmbReports.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReports.FormattingEnabled = true;
             this.cmbReports.Location = new System.Drawing.Point(328, 80);
             this.cmbReports.Name = "cmbReports";
@@ -330,16 +360,122 @@
             this.cmbReports.TabIndex = 0;
             this.cmbReports.SelectedIndexChanged += new System.EventHandler(this.cmbReports_SelectedIndexChanged);
             // 
-            // btnBackToPersonalMain
+            // DetailedReports
             // 
-            this.btnBackToPersonalMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBackToPersonalMain.Image = ((System.Drawing.Image)(resources.GetObject("btnBackToPersonalMain.Image")));
-            this.btnBackToPersonalMain.Location = new System.Drawing.Point(12, 450);
-            this.btnBackToPersonalMain.Name = "btnBackToPersonalMain";
-            this.btnBackToPersonalMain.Size = new System.Drawing.Size(56, 38);
-            this.btnBackToPersonalMain.TabIndex = 56;
-            this.btnBackToPersonalMain.UseVisualStyleBackColor = false;
-            this.btnBackToPersonalMain.Click += new System.EventHandler(this.btnBackToPersonalMain_Click);
+            this.DetailedReports.BackgroundImage = global::Dieta.UI.Properties.Resources.backgroundimagewidescreen;
+            this.DetailedReports.Controls.Add(this.btnGetChoice);
+            this.DetailedReports.Controls.Add(this.dgvSnacksDetails);
+            this.DetailedReports.Controls.Add(this.dgvDinnerDetails);
+            this.DetailedReports.Controls.Add(this.dgvLunchDetails);
+            this.DetailedReports.Controls.Add(this.dgvBreakfastDetails);
+            this.DetailedReports.Controls.Add(this.label15);
+            this.DetailedReports.Controls.Add(this.label13);
+            this.DetailedReports.Controls.Add(this.label14);
+            this.DetailedReports.Controls.Add(this.label12);
+            this.DetailedReports.Controls.Add(this.label11);
+            this.DetailedReports.Controls.Add(this.cmbMakeYourChoice);
+            this.DetailedReports.Location = new System.Drawing.Point(4, 25);
+            this.DetailedReports.Name = "DetailedReports";
+            this.DetailedReports.Size = new System.Drawing.Size(990, 495);
+            this.DetailedReports.TabIndex = 2;
+            this.DetailedReports.Text = "Detailed Food Reports";
+            this.DetailedReports.UseVisualStyleBackColor = true;
+            // 
+            // btnGetChoice
+            // 
+            this.btnGetChoice.Location = new System.Drawing.Point(474, 106);
+            this.btnGetChoice.Name = "btnGetChoice";
+            this.btnGetChoice.Size = new System.Drawing.Size(113, 32);
+            this.btnGetChoice.TabIndex = 3;
+            this.btnGetChoice.Text = "Get Reports";
+            this.btnGetChoice.UseVisualStyleBackColor = true;
+            this.btnGetChoice.Click += new System.EventHandler(this.btnGetChoice_Click);
+            // 
+            // dgvSnacksDetails
+            // 
+            this.dgvSnacksDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSnacksDetails.Location = new System.Drawing.Point(593, 339);
+            this.dgvSnacksDetails.Name = "dgvSnacksDetails";
+            this.dgvSnacksDetails.Size = new System.Drawing.Size(269, 139);
+            this.dgvSnacksDetails.TabIndex = 2;
+            // 
+            // dgvDinnerDetails
+            // 
+            this.dgvDinnerDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDinnerDetails.Location = new System.Drawing.Point(199, 339);
+            this.dgvDinnerDetails.Name = "dgvDinnerDetails";
+            this.dgvDinnerDetails.Size = new System.Drawing.Size(269, 139);
+            this.dgvDinnerDetails.TabIndex = 2;
+            // 
+            // dgvLunchDetails
+            // 
+            this.dgvLunchDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLunchDetails.Location = new System.Drawing.Point(593, 165);
+            this.dgvLunchDetails.Name = "dgvLunchDetails";
+            this.dgvLunchDetails.Size = new System.Drawing.Size(269, 139);
+            this.dgvLunchDetails.TabIndex = 2;
+            // 
+            // dgvBreakfastDetails
+            // 
+            this.dgvBreakfastDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBreakfastDetails.Location = new System.Drawing.Point(199, 165);
+            this.dgvBreakfastDetails.Name = "dgvBreakfastDetails";
+            this.dgvBreakfastDetails.Size = new System.Drawing.Size(269, 139);
+            this.dgvBreakfastDetails.TabIndex = 2;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(590, 319);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 17);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Snacks :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(590, 145);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 17);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Lunch :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(196, 319);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(66, 17);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Dinner :";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(196, 145);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 17);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Breakfast :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(196, 113);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(145, 17);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Make your choice :";
+            // 
+            // cmbMakeYourChoice
+            // 
+            this.cmbMakeYourChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMakeYourChoice.FormattingEnabled = true;
+            this.cmbMakeYourChoice.Location = new System.Drawing.Point(347, 106);
+            this.cmbMakeYourChoice.Name = "cmbMakeYourChoice";
+            this.cmbMakeYourChoice.Size = new System.Drawing.Size(121, 24);
+            this.cmbMakeYourChoice.TabIndex = 0;
             // 
             // ReportsForm
             // 
@@ -365,6 +501,12 @@
             this.groupBoxChart.ResumeLayout(false);
             this.groupBoxChart.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.DetailedReports.ResumeLayout(false);
+            this.DetailedReports.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSnacksDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDinnerDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLunchDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBreakfastDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,5 +539,17 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnBackToPersonalMain;
+        private System.Windows.Forms.TabPage DetailedReports;
+        private System.Windows.Forms.Button btnGetChoice;
+        private System.Windows.Forms.DataGridView dgvSnacksDetails;
+        private System.Windows.Forms.DataGridView dgvDinnerDetails;
+        private System.Windows.Forms.DataGridView dgvLunchDetails;
+        private System.Windows.Forms.DataGridView dgvBreakfastDetails;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cmbMakeYourChoice;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label12;
     }
 }

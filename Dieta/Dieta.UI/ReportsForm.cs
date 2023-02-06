@@ -44,10 +44,13 @@ namespace Dieta.UI
             cmbReports.Items.Add("Calories");
             cmbReports.Items.Add("Burned Calories");
             cmbReports.Items.Add("Net Calories");
-            dgvBreakfast.Enabled = false;
-            dgvLunch.Enabled = false;
-            dgvDinner.Enabled = false;
-            dgvSnacks.Enabled = false;
+            cmbMakeYourChoice.Items.Clear();
+            cmbMakeYourChoice.SelectedIndex = -1;
+            cmbMakeYourChoice.Items.Add("Daily");
+            cmbMakeYourChoice.Items.Add("Weekly");
+            cmbMakeYourChoice.Items.Add("Monthly");
+            cmbMakeYourChoice.Items.Add("Yearly");
+            cmbMakeYourChoice.Items.Add("All Time");
         }
 
         private void cmbReports_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,14 +96,14 @@ namespace Dieta.UI
 
                 MessageBox.Show("Something went wrong!");
             }
-            
+
         }
 
         private void btnGetReport_Click(object sender, EventArgs e)
         {
             DateTime dateTime1 = dtpReportDate.Value.Date;
             DailyProgramme dailyProgramme = Context.DailyProgrammes.Where(dp => dp.Day == dateTime1.Day && dp.Month == dateTime1.Month && dp.Year == dateTime1.Year).FirstOrDefault();
-            if (dailyProgramme!=null)
+            if (dailyProgramme != null)
             {
                 dgvBreakfast.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme.Id && fd.MealId == 1).ToList();
                 dgvLunch.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme.Id && fd.MealId == 2).ToList();
@@ -120,6 +123,179 @@ namespace Dieta.UI
         private void btnBackToPersonalMain_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGetChoice_Click(object sender, EventArgs e)
+        {
+            DateTime dateTime1 = DateTime.Now.Date;
+            if (cmbMakeYourChoice.SelectedItem == "Daily")
+            {
+                DailyProgramme dailyProgramme1 = Context.DailyProgrammes.Where(dp => dp.Day == dateTime1.Day && dp.Month == dateTime1.Month && dp.Year == dateTime1.Year && dp.UserId == User.Id).FirstOrDefault();
+                dgvBreakfastDetails.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme1.Id && fd.MealId == 1).OrderByDescending(fd => fd.Portion).ToList();
+                dgvLunchDetails.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme1.Id && fd.MealId == 2).OrderByDescending(fd => fd.Portion).ToList();
+                dgvDinnerDetails.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme1.Id && fd.MealId == 3).OrderByDescending(fd => fd.Portion).ToList();
+                dgvSnacksDetails.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme1.Id && fd.MealId == 4).OrderByDescending(fd => fd.Portion).ToList();
+            }
+            else if (cmbMakeYourChoice.SelectedItem == "Weekly")
+            {
+                List<DailyProgramme> dailyProgrammes = Context.DailyProgrammes.Where(dp => dp.Day >= dateTime1.Day - 7 && dp.Month == dateTime1.Month && dp.Year == dateTime1.Year && dp.UserId == User.Id).ToList();
+                List<FoodDetail> foodDetails1 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 1).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails1.Add(item1);
+                    }
+                }
+                dgvBreakfastDetails.DataSource = foodDetails1;
+                List<FoodDetail> foodDetails2 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 2).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails2.Add(item1);
+                    }
+                }
+                dgvLunchDetails.DataSource = foodDetails2;
+                List<FoodDetail> foodDetails3 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 3).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails3.Add(item1);
+                    }
+                }
+                dgvDinnerDetails.DataSource = foodDetails3;
+                List<FoodDetail> foodDetails4 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 4).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails4.Add(item1);
+                    }
+                }
+                dgvSnacksDetails.DataSource = foodDetails4;
+            }
+            else if (cmbMakeYourChoice.SelectedItem == "Monthly")
+            {
+                List<DailyProgramme> dailyProgrammes = Context.DailyProgrammes.Where(dp => dp.Month == dateTime1.Month && dp.Year == dateTime1.Year && dp.UserId == User.Id).ToList();
+                List<FoodDetail> foodDetails1 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 1).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails1.Add(item1);
+                    }
+                }
+                dgvBreakfastDetails.DataSource = foodDetails1;
+                List<FoodDetail> foodDetails2 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 2).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails2.Add(item1);
+                    }
+                }
+                dgvLunchDetails.DataSource = foodDetails2;
+                List<FoodDetail> foodDetails3 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 3).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails3.Add(item1);
+                    }
+                }
+                dgvDinnerDetails.DataSource = foodDetails3;
+                List<FoodDetail> foodDetails4 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 4).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails4.Add(item1);
+                    }
+                }
+                dgvSnacksDetails.DataSource = foodDetails4;
+            }
+            else if (cmbMakeYourChoice.SelectedItem == "Yearly")
+            {
+                List<DailyProgramme> dailyProgrammes = Context.DailyProgrammes.Where(dp => dp.Year == dateTime1.Year && dp.UserId == User.Id).ToList();
+                List<FoodDetail> foodDetails1 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 1).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails1.Add(item1);
+                    }
+                }
+                dgvBreakfastDetails.DataSource = foodDetails1;
+                List<FoodDetail> foodDetails2 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 2).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails2.Add(item1);
+                    }
+                }
+                dgvLunchDetails.DataSource = foodDetails2;
+                List<FoodDetail> foodDetails3 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 3).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails3.Add(item1);
+                    }
+                }
+                dgvDinnerDetails.DataSource = foodDetails3;
+                List<FoodDetail> foodDetails4 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 4).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails4.Add(item1);
+                    }
+                }
+                dgvSnacksDetails.DataSource = foodDetails4;
+            }
+            else if (cmbMakeYourChoice.SelectedItem == "All Time")
+            {
+                List<DailyProgramme> dailyProgrammes = Context.DailyProgrammes.Where(dp => dp.UserId == User.Id).ToList();
+                List<FoodDetail> foodDetails1 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 1).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails1.Add(item1);
+                    }
+                }
+                dgvBreakfastDetails.DataSource = foodDetails1;
+                List<FoodDetail> foodDetails2 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 2).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails2.Add(item1);
+                    }
+                }
+                dgvLunchDetails.DataSource = foodDetails2;
+                List<FoodDetail> foodDetails3 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 3).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails3.Add(item1);
+                    }
+                }
+                dgvDinnerDetails.DataSource = foodDetails3;
+                List<FoodDetail> foodDetails4 = new List<FoodDetail>();
+                foreach (DailyProgramme item in dailyProgrammes)
+                {
+                    foreach (var item1 in Context.FoodDetails.Where(fd => fd.DailyProgrammeId == item.Id && fd.MealId == 4).OrderByDescending(fd => fd.Portion).ToList())
+                    {
+                        foodDetails4.Add(item1);
+                    }
+                }
+                dgvSnacksDetails.DataSource = foodDetails4;
+            }
         }
     }
 }

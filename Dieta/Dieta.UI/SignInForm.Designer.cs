@@ -341,7 +341,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignInForm";
-            this.Text = "SignInForm";
+            this.Text = "DIETA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignInForm_FormClosing);
             this.Load += new System.EventHandler(this.SignInForm_Load);
             this.groupBox1.ResumeLayout(false);

@@ -81,6 +81,10 @@ namespace Dieta.UI
             {
                 progressBarCurrentCal.Value = Convert.ToInt32(netCalories);
             }
+            else if (netCalories<0)
+            {
+                progressBarCurrentCal.Value = progressBarCurrentCal.Minimum;
+            }
             else if (netCalories > goalOfCalories)
             {
                 progressBarCurrentCal.Value = progressBarCurrentCal.Maximum;

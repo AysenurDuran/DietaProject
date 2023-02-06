@@ -35,16 +35,6 @@ namespace Dieta.UI
         private void AddExerciseForm_Load(object sender, EventArgs e)
         {
             pbPhotoOfSport.Image = Dieta.UI.Properties.Resources.fitness;
-            //List<Exercise> exercises = new List<Exercise>() {
-            //    new Exercise() { ExerciseName = "Yürümek", BurnCaloriesPerMinute = 5 },
-            //    new Exercise { ExerciseName = "Koşmak", BurnCaloriesPerMinute = 10 },
-            //    new Exercise() { ExerciseName = "Yüzmek", BurnCaloriesPerMinute = 15 },
-            //    new Exercise() { ExerciseName = "Tenis oynamak", BurnCaloriesPerMinute = 15 } };
-            //foreach (Exercise exercise in exercises)
-            //{
-            //    Context.Exercises.Add(exercise);
-            //}
-            //Context.SaveChanges();
             cmbExercise.DataSource = Context.Exercises.ToList();
             cmbExercise.DisplayMember = "ExerciseName";
             cmbExercise.SelectedIndex = -1;

@@ -1,3 +1,4 @@
+using Dieta.DAL.DBInitiliazers;
 using Dieta.Model.Models;
 using System;
 using System.Data.Entity;
@@ -16,6 +17,8 @@ namespace Dieta.DAL.Entity
         public DietaEntities()
             : base("name=DietaEntities")
         {
+            Database.SetInitializer(new DietaInitializer());
+            Database.Initialize(false);
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 

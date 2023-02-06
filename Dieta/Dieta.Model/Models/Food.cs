@@ -15,7 +15,7 @@ namespace Dieta.Model.Models
         
         public string Name { get; set; }
       
-        public byte[] Photo { get; set; }
+        public string Photo { get; set; }
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
 

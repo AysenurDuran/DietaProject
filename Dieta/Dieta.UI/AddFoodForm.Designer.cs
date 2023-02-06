@@ -54,9 +54,11 @@
             this.lblSugar = new System.Windows.Forms.Label();
             this.lblSodium = new System.Windows.Forms.Label();
             this.btnBackToPersonalMain = new System.Windows.Forms.Button();
+            this.pbFood = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddedFoods)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFood)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearchFood
@@ -181,7 +183,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(182, 363);
+            this.label6.Location = new System.Drawing.Point(317, 356);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 17);
             this.label6.TabIndex = 7;
@@ -191,7 +193,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(218, 386);
+            this.label2.Location = new System.Drawing.Point(353, 379);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 7;
@@ -201,7 +203,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(189, 409);
+            this.label3.Location = new System.Drawing.Point(324, 402);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 7;
@@ -211,7 +213,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(199, 432);
+            this.label4.Location = new System.Drawing.Point(334, 425);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 7;
@@ -221,7 +223,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(198, 455);
+            this.label5.Location = new System.Drawing.Point(333, 448);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 17);
             this.label5.TabIndex = 7;
@@ -231,7 +233,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(188, 478);
+            this.label7.Location = new System.Drawing.Point(323, 471);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 17);
             this.label7.TabIndex = 7;
@@ -241,7 +243,7 @@
             // 
             this.lblCalories.AutoSize = true;
             this.lblCalories.BackColor = System.Drawing.Color.Transparent;
-            this.lblCalories.Location = new System.Drawing.Point(264, 363);
+            this.lblCalories.Location = new System.Drawing.Point(399, 356);
             this.lblCalories.Name = "lblCalories";
             this.lblCalories.Size = new System.Drawing.Size(17, 17);
             this.lblCalories.TabIndex = 7;
@@ -251,7 +253,7 @@
             // 
             this.lblFat.AutoSize = true;
             this.lblFat.BackColor = System.Drawing.Color.Transparent;
-            this.lblFat.Location = new System.Drawing.Point(264, 386);
+            this.lblFat.Location = new System.Drawing.Point(399, 379);
             this.lblFat.Name = "lblFat";
             this.lblFat.Size = new System.Drawing.Size(17, 17);
             this.lblFat.TabIndex = 7;
@@ -261,7 +263,7 @@
             // 
             this.lblProtein.AutoSize = true;
             this.lblProtein.BackColor = System.Drawing.Color.Transparent;
-            this.lblProtein.Location = new System.Drawing.Point(264, 409);
+            this.lblProtein.Location = new System.Drawing.Point(399, 402);
             this.lblProtein.Name = "lblProtein";
             this.lblProtein.Size = new System.Drawing.Size(17, 17);
             this.lblProtein.TabIndex = 7;
@@ -271,7 +273,7 @@
             // 
             this.lblCarbs.AutoSize = true;
             this.lblCarbs.BackColor = System.Drawing.Color.Transparent;
-            this.lblCarbs.Location = new System.Drawing.Point(264, 432);
+            this.lblCarbs.Location = new System.Drawing.Point(399, 425);
             this.lblCarbs.Name = "lblCarbs";
             this.lblCarbs.Size = new System.Drawing.Size(17, 17);
             this.lblCarbs.TabIndex = 7;
@@ -281,7 +283,7 @@
             // 
             this.lblSugar.AutoSize = true;
             this.lblSugar.BackColor = System.Drawing.Color.Transparent;
-            this.lblSugar.Location = new System.Drawing.Point(264, 455);
+            this.lblSugar.Location = new System.Drawing.Point(399, 448);
             this.lblSugar.Name = "lblSugar";
             this.lblSugar.Size = new System.Drawing.Size(17, 17);
             this.lblSugar.TabIndex = 7;
@@ -291,7 +293,7 @@
             // 
             this.lblSodium.AutoSize = true;
             this.lblSodium.BackColor = System.Drawing.Color.Transparent;
-            this.lblSodium.Location = new System.Drawing.Point(264, 478);
+            this.lblSodium.Location = new System.Drawing.Point(399, 471);
             this.lblSodium.Name = "lblSodium";
             this.lblSodium.Size = new System.Drawing.Size(17, 17);
             this.lblSodium.TabIndex = 7;
@@ -308,12 +310,22 @@
             this.btnBackToPersonalMain.UseVisualStyleBackColor = false;
             this.btnBackToPersonalMain.Click += new System.EventHandler(this.btnBackToPersonalMain_Click);
             // 
+            // pbFood
+            // 
+            this.pbFood.Location = new System.Drawing.Point(191, 359);
+            this.pbFood.Name = "pbFood";
+            this.pbFood.Size = new System.Drawing.Size(115, 134);
+            this.pbFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFood.TabIndex = 21;
+            this.pbFood.TabStop = false;
+            // 
             // AddFoodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Dieta.UI.Properties.Resources.backgroundimagewidescreen;
             this.ClientSize = new System.Drawing.Size(716, 501);
+            this.Controls.Add(this.pbFood);
             this.Controls.Add(this.btnBackToPersonalMain);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -348,6 +360,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddedFoods)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFood)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,5 +393,6 @@
         private System.Windows.Forms.Label lblSugar;
         private System.Windows.Forms.Label lblSodium;
         private System.Windows.Forms.Button btnBackToPersonalMain;
+        private System.Windows.Forms.PictureBox pbFood;
     }
 }

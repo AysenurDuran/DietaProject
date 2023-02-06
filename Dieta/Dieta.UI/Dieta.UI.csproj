@@ -271,6 +271,357 @@
   <ItemGroup>
     <None Include="Resources\water.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_Raspberry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002_Pineapple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003_Blueberry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004_Avocado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\005_Apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006_Banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\007_Grape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\008_Pear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\009_Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\010_Fig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\011_Plum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012_Cherry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\013_Sourcherry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\014_Apricot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\015_Tangerine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\016_Peach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\017_Strawberry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\018_Melon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\019_Lemon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\020_Watermelon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\021_Corn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\022_Pea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\023_BoiledPotato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\024_Leek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\025_Beet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\026_Carrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\027_Celery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\028_Onion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\029_Bean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\030_Mushroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031_Cauli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\032_Spinach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\033_Cabbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\034_Paprika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\035_Tomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\036_Radish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\037_Cucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\038_BakedBean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\039_PeawithCarrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\040_Hummus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\041_SteamedArtichoke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\042_Sultan%27sDelight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\043_MincedBeefPide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\044_PotatoPuree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\045_SteamedCelery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\046_PotatoSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\047_AdanaKebab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\048_BulgurPilaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\049_MixedPidewithCheese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\050_Lasagna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\051_StuffedGrapeLeave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\052_PastawithCheese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\053_SaladwithGrilledChicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\054_StuffedPeppersMincedMeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\055_GreenRunnerBean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\056_EggplantwithMincedMeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\057_Octopus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\058_Shrimp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\059_FriedCalamaris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\060_StuffedMussel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\061_Fried Anchovies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\062_Salmon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\063_Bonito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\064_SeaBass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\065_Bream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\066_Mackerel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\067_RedMullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\068_Pork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\069_Duck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\070_Mutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\071_Beef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\072_LambChop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\073_ChickenBreast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\074_TurkeyBreast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\075_Steak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\076_KasharCheese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\077_CreamCheese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\078_StringCheese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\079_WhiteCheese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\080_Bryndza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\081_SheepMilk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\082_CurdCheese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\083_Yoghurt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\084_CowMilk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\085_Ayran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\086_SunflowerSeedOil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\087_OliveOil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\088_Margarine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\089_Butter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\090_Mayonnaise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\091_Mustard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\092_Ketchup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\093_Phyllo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\094_WhiteBread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\095_RyeBread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\096_WholeWheatBread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\097_Walnut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\098_Hazelnut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\099_Almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100_Pistachio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101_Peanut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102_Popcorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103_ChocolateCake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104_Biscuit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\105_ApplePie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\106_IceCream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\107_MilkChocolate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\108_BitterChocolate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\109_Baklava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110_RicePudding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111_Coke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\112_AppleJuice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\113_OrangeJuice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\114_IceTea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\115_Coffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\116_Tea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\117_GreenTea.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

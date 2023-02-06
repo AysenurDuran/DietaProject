@@ -36,55 +36,6 @@ namespace Dieta.UI
             txtPassword.PasswordChar = '*';
             lblWelcomeSignIn.Text = "Welcome to the exclusive healthy world of Dieta!\n\nLet's begin!";
             rdoFemale.Checked = true;
-
-            ActivityLevel activityLevel = new ActivityLevel() { ActivityLevelName = "Not Active" };
-            ActivityLevel activityLevel1 = new ActivityLevel() { ActivityLevelName = "Ligthly Active" };
-            ActivityLevel activityLevel2 = new ActivityLevel() { ActivityLevelName = "Active" };
-            ActivityLevel activityLevel3 = new ActivityLevel() { ActivityLevelName = "Very Active" };
-            Context.ActivityLevels.Add(activityLevel);
-            Context.ActivityLevels.Add(activityLevel1);
-            Context.ActivityLevels.Add(activityLevel2);
-            Context.ActivityLevels.Add(activityLevel3);
-
-            Goal goal = new Goal() { GoalName = "Lose Weight" };
-            Goal goal1 = new Goal() { GoalName = "Stay Weight" };
-            Goal goal2 = new Goal() { GoalName = "Gain Weight" };
-
-            Context.Goals.Add(goal);
-            Context.Goals.Add(goal1);
-            Context.Goals.Add(goal2);
-
-            //Category category = new Category() { CategoryName = "Meyve", Description = "Vitaminli şeyler" };
-            //Category category1 = new Category() { CategoryName = "Sebze", Description = "Yeşil şeyler" };
-            //Context.Categories.Add(category);
-            //Context.Categories.Add(category1);
-
-            //Food food = new Food()
-            //{
-            //    Name = "Elma",
-            //    CategoryId = 1,
-            //    Calories = 25,
-            //    Fat = 25,
-            //    Protein = 25,
-            //    Sugar = 25,
-            //    Carbs = 25,
-            //    Sodium = 25
-            //};
-            //Food food1 = new Food()
-            //{
-            //    Name = "Armut",
-            //    CategoryId = 1,
-            //    Calories = 25,
-            //    Fat = 25,
-            //    Protein = 25,
-            //    Sugar = 25,
-            //    Carbs = 25,
-            //    Sodium = 25
-            //};
-            //Context.Foods.Add(food);
-            //Context.Foods.Add(food1);
-            Context.SaveChanges();
-
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -95,7 +46,6 @@ namespace Dieta.UI
                 double height = Convert.ToDouble(txtHeight.Text.Trim());
                 double result = DietaController.CalculateBMI(rdoMale.Checked == true ? 0 : 1, weight, height);
                 //double result = weight / ((height / 100) * (height / 100));
-                //lblResult.Text = (result.ToString("0.###"));
                 if (result > 0 && result <= 18.5)
                 {
                     if (rdoFemale.Checked)

@@ -32,46 +32,6 @@ namespace Dieta.UI
 
         private void PersonalMainForm_Load(object sender, EventArgs e)
         {
-            Meal meal = new Meal() { MealName = "Breakfast" };
-            Meal meal1 = new Meal() { MealName = "Lunch" };
-            Meal meal2 = new Meal() { MealName = "Dinner" };
-            Meal meal3 = new Meal() { MealName = "Snacks" };
-            context.Meals.Add(meal);
-            context.Meals.Add(meal1);
-            context.Meals.Add(meal2);
-            context.Meals.Add(meal3);
-            Category category = new Category() { CategoryName = "Meyve", Description = "Bol vitaminli" };
-            Category category1 = new Category() { CategoryName = "Sebze", Description = "Bol vitaminli" };
-            Category category2 = new Category() { CategoryName = "Et", Description = "Bol vitaminli" };
-            context.Categories.Add(category);
-            context.Categories.Add(category1);
-            context.Categories.Add(category2);
-            Food food = new Food()
-            {
-                Name = "Elma",
-                CategoryId = 1,
-                Calories = 125,
-                Fat = 25,
-                Protein = 25,
-                Sugar = 25,
-                Carbs = 25,
-                Sodium = 25
-            };
-            context.Foods.Add(food);
-            Food food1 = new Food()
-            {
-                Name = "Armut",
-                CategoryId = 1,
-                Calories = 150,
-                Fat = 25,
-                Protein = 25,
-                Sugar = 25,
-                Carbs = 25,
-                Sodium = 25
-            };
-            context.Foods.Add(food1);
-            context.SaveChanges();
-
             lblWaterNotification.Text = "Water is the most important part of a healthy life. As Dieta, we recommend that you drink at least 2.5 liters of water a day.";
             lblPersonalPageText.Text = "Did you know you've made your life healthier with Dieta?\nWelcome to the section with the diary summary.";
             pbUserPhoto.ImageLocation = "";

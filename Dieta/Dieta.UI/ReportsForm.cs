@@ -110,7 +110,5 @@ namespace Dieta.UI
         {
             this.Close();
         }
-
-
     }
 }

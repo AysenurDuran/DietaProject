@@ -33,8 +33,7 @@ namespace Dieta.UI
         private void lnkPasswordChange_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PasswordChangeForm passwordChangeForm = new PasswordChangeForm(User);
-            passwordChangeForm.Show();
-            this.Close();
+            passwordChangeForm.ShowDialog();
         }
 
         private void PersonalInformationForm_Load(object sender, EventArgs e)

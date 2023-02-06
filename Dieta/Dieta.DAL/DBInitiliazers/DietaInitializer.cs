@@ -104,6 +104,11 @@ namespace Dieta.DAL.DBInitiliazers
                 {
                     CategoryName = "Beverages",
                     Description = " "
+                },
+                new Category()
+                {
+                    CategoryName = "Water",
+                    Description = " "
                 }
             };
             for (int i = 0; i < categories.Count; i++)
@@ -1520,6 +1525,18 @@ namespace Dieta.DAL.DBInitiliazers
                     Sugar = 0,
                     Carbs = 0,
                     Sodium = 16
+                },
+                new Food()
+                {
+                    Name = "Water",
+                    Photo = "",
+                    CategoryId = 12,
+                    Calories = 0,
+                    Fat = 0,
+                    Protein = 0,
+                    Sugar = 0,
+                    Carbs = 0,
+                    Sodium = 0
                 }
             };
 

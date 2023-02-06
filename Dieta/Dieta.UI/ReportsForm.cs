@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -106,9 +107,101 @@ namespace Dieta.UI
             if (dailyProgramme != null)
             {
                 dgvBreakfast.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme.Id && fd.MealId == 1).ToList();
+                double totalCalBreakfast = 0;
+                double totalFatBreakfast = 0;
+                double totalProBreakfast = 0;
+                double totalCarbsBreakfast = 0;
+                double totalSugarBreakfast = 0;
+                double totalSodiumBreakfast = 0;
+                foreach (DataGridViewRow row in dgvBreakfast.Rows)
+                {
+                    FoodDetail foodDetail = (FoodDetail)row.DataBoundItem;
+                    totalCalBreakfast += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Calories;
+                    totalFatBreakfast += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Fat;
+                    totalProBreakfast += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Protein;
+                    totalCarbsBreakfast += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Carbs;
+                    totalSugarBreakfast += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Sugar;
+                    totalSodiumBreakfast += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Sodium;
+                }
+                lblTotalCalBreakfast.Text = totalCalBreakfast.ToString();
+                lblFatBreakfast.Text = totalFatBreakfast.ToString();
+                lblProBreakfast.Text = totalProBreakfast.ToString();
+                lblCarbsBreakfast.Text = totalCarbsBreakfast.ToString();
+                lblSugarBreakfast.Text = totalSugarBreakfast.ToString();
+                lblSodiumBreakfast.Text = totalSodiumBreakfast.ToString();
+
                 dgvLunch.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme.Id && fd.MealId == 2).ToList();
+
+                double totalCalLunch = 0;
+                double totalFatLunch = 0;
+                double totalProLunch = 0;
+                double totalCarbsLunch = 0;
+                double totalSugarLunch = 0;
+                double totalSodiumLunch = 0;
+                foreach (DataGridViewRow row in dgvLunch.Rows)
+                {
+                    FoodDetail foodDetail = (FoodDetail)row.DataBoundItem;
+                    totalCalLunch += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Calories;
+                    totalFatLunch += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Fat;
+                    totalProLunch += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Protein;
+                    totalCarbsLunch += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Carbs;
+                    totalSugarLunch += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Sugar;
+                    totalSodiumLunch += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Sodium;
+                }
+                lblTotalCalLunch.Text = totalCalLunch.ToString();
+                lblFatLunch.Text = totalFatLunch.ToString();
+                lblProLunch.Text = totalProLunch.ToString();
+                lblCarbsLunch.Text = totalCarbsLunch.ToString();
+                lblSugarLunch.Text = totalSugarLunch.ToString();
+                lblSodiumLunch.Text = totalSugarLunch.ToString();
+
                 dgvDinner.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme.Id && fd.MealId == 3).ToList();
+                double totalCalDinner = 0;
+                double totalFatDinner = 0;
+                double totalProDinner = 0;
+                double totalCarbsDinner = 0;
+                double totalSugarDinner = 0;
+                double totalSodiumDinner = 0;
+                foreach (DataGridViewRow row in dgvDinner.Rows)
+                {
+                    FoodDetail foodDetail = (FoodDetail)row.DataBoundItem;
+                    totalCalDinner += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Calories;
+                    totalFatDinner += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Fat;
+                    totalProDinner += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Protein;
+                    totalCarbsDinner += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Carbs;
+                    totalSugarDinner += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Sugar;
+                    totalSodiumDinner += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Sodium;
+                }
+                lblTotalCalDinner.Text = totalCalDinner.ToString();
+                lblFatDinner.Text = totalFatDinner.ToString();
+                lblProDinner.Text = totalProDinner.ToString();
+                lblCarbsDinner.Text = totalCarbsDinner.ToString();
+                lblSugarDinner.Text = totalSugarDinner.ToString();
+                lblSodiumDinner.Text = totalSodiumDinner.ToString();
+
                 dgvSnacks.DataSource = Context.FoodDetails.Where(fd => fd.DailyProgrammeId == dailyProgramme.Id && fd.MealId == 4).ToList();
+                double totalCalSnacks = 0;
+                double totalFatSnacks = 0;
+                double totalProSnacks = 0;
+                double totalCarbsSnacks = 0;
+                double totalSugarSnacks = 0;
+                double totalSodiumSnacks = 0;
+                foreach (DataGridViewRow row in dgvSnacks.Rows)
+                {
+                    FoodDetail foodDetail = (FoodDetail)row.DataBoundItem;
+                    totalCalSnacks += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Calories;
+                    totalFatSnacks += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Fat;
+                    totalProSnacks += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Protein;
+                    totalCarbsSnacks += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Carbs;
+                    totalSugarSnacks += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Sugar;
+                    totalSodiumSnacks += Context.Foods.Where(f => f.Id == foodDetail.FoodId).FirstOrDefault().Sodium;
+                }
+                lblTotalCalSnacks.Text = totalCalSnacks.ToString();
+                lblFatSnacks.Text = totalFatSnacks.ToString();
+                lblProSnacks.Text = totalProSnacks.ToString();
+                lblCarbsSnacks.Text = totalCarbsSnacks.ToString();
+                lblSugarSnacks.Text = totalSugarSnacks.ToString();
+                lblSodiumSnacks.Text = totalSodiumSnacks.ToString();
 
                 lblBurnedCalories.Text = dailyProgramme.TotalBurnedCal.ToString();
                 lblTotalCalories.Text = dailyProgramme.TotalCal.ToString();

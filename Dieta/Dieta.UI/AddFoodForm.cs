@@ -505,10 +505,5 @@ namespace Dieta.UI
             personalMainForm.Show();
             this.Hide();
         }
-
-        private void AddFoodForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

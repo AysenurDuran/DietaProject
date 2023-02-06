@@ -76,7 +76,7 @@ namespace Dieta.UI
                 Context.SaveChanges();
                 PersonalMainForm personalMainForm = new PersonalMainForm(User);
                 personalMainForm.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {

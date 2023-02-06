@@ -68,3 +68,17 @@ C:\GitHubProjects\DietaLast\DietaLast\Dieta\Dieta.DAL\obj\Debug\Dieta.DAL.csproj
 C:\GitHubProjects\DietaLast\DietaLast\Dieta\Dieta.DAL\obj\Debug\Dieta.DAL.csproj.CopyComplete
 C:\GitHubProjects\DietaLast\DietaLast\Dieta\Dieta.DAL\obj\Debug\Dieta.DAL.dll
 C:\GitHubProjects\DietaLast\DietaLast\Dieta\Dieta.DAL\obj\Debug\Dieta.DAL.pdb
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\bin\Debug\Dieta.DAL.dll.config
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\bin\Debug\Dieta.DAL.dll
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\bin\Debug\Dieta.DAL.pdb
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\bin\Debug\Dieta.Model.dll
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\bin\Debug\EntityFramework.dll
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\bin\Debug\Dieta.Model.pdb
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\bin\Debug\EntityFramework.xml
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\obj\Debug\Dieta.DAL.csproj.AssemblyReference.cache
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\obj\Debug\Dieta.DAL.csproj.CoreCompileInputs.cache
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\obj\Debug\Dieta.DAL.csproj.CopyComplete
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\obj\Debug\Dieta.DAL.dll
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.DAL\obj\Debug\Dieta.DAL.pdb

@@ -39,6 +39,7 @@ namespace Dieta.UI
 
         private void ReportsForm_Load(object sender, EventArgs e)
         {
+            cmbReports.Items.Clear();
             cmbReports.SelectedIndex = -1;
             cmbReports.Items.Add("Calories");
             cmbReports.Items.Add("Burned Calories");
@@ -51,38 +52,48 @@ namespace Dieta.UI
 
         private void cmbReports_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DateTime currentDate = DateTime.Now.Date;
-            List<DailyProgramme> dailyProgrammes = Context.DailyProgrammes.Where(dp => dp.UserId == User.Id).ToList();
-            if (cmbReports.SelectedItem.ToString() == "Calories")
+            try
             {
-                for (int i = 0; i < dailyProgrammes.Count; i++)
+                chart1.Series.Clear();
+                DateTime currentDate = DateTime.Now.Date;
+                List<DailyProgramme> dailyProgrammes = Context.DailyProgrammes.Where(dp => dp.UserId == User.Id).ToList();
+                if (cmbReports.SelectedItem.ToString() == "Calories")
                 {
-                    if (dailyProgrammes[i].Year == currentDate.Year && dailyProgrammes[i].Month == currentDate.Month && dailyProgrammes[i].Day <= currentDate.Day)
+                    for (int i = 0; i < dailyProgrammes.Count; i++)
                     {
-                        chart1.Series["Chart"].Points.AddXY(dailyProgrammes[i].Day + "/" + dailyProgrammes[i].Month + "/" + dailyProgrammes[i].Year, dailyProgrammes[i].TotalCal);
+                        if (dailyProgrammes[i].Year == currentDate.Year && dailyProgrammes[i].Month == currentDate.Month && dailyProgrammes[i].Day <= currentDate.Day)
+                        {
+                            chart1.Series["Chart"].Points.AddXY(dailyProgrammes[i].Day + "/" + dailyProgrammes[i].Month + "/" + dailyProgrammes[i].Year, dailyProgrammes[i].TotalCal);
+                        }
+                    }
+                }
+                else if (cmbReports.SelectedItem.ToString() == "Burned Calories")
+                {
+                    for (int i = 0; i < dailyProgrammes.Count; i++)
+                    {
+                        if (dailyProgrammes[i].Year == currentDate.Year && dailyProgrammes[i].Month == currentDate.Month && dailyProgrammes[i].Day <= currentDate.Day)
+                        {
+                            chart1.Series["Chart"].Points.AddXY(dailyProgrammes[i].Day + "/" + dailyProgrammes[i].Month + "/" + dailyProgrammes[i].Year, dailyProgrammes[i].TotalBurnedCal);
+                        }
+                    }
+                }
+                else if (cmbReports.SelectedItem.ToString() == "Net Calories")
+                {
+                    for (int i = 0; i < dailyProgrammes.Count; i++)
+                    {
+                        if (dailyProgrammes[i].Year == currentDate.Year && dailyProgrammes[i].Month == currentDate.Month && dailyProgrammes[i].Day <= currentDate.Day)
+                        {
+                            chart1.Series["Chart"].Points.AddXY(dailyProgrammes[i].Day + "/" + dailyProgrammes[i].Month + "/" + dailyProgrammes[i].Year, dailyProgrammes[i].NetCal);
+                        }
                     }
                 }
             }
-            else if (cmbReports.SelectedItem.ToString() == "Burned Calories")
+            catch (Exception)
             {
-                for (int i = 0; i < dailyProgrammes.Count; i++)
-                {
-                    if (dailyProgrammes[i].Year == currentDate.Year && dailyProgrammes[i].Month == currentDate.Month && dailyProgrammes[i].Day <= currentDate.Day)
-                    {
-                        chart1.Series["Chart"].Points.AddXY(dailyProgrammes[i].Day + "/" + dailyProgrammes[i].Month + "/" + dailyProgrammes[i].Year, dailyProgrammes[i].TotalBurnedCal);
-                    }
-                }
+
+                MessageBox.Show("Something went wrong!");
             }
-            else if (cmbReports.SelectedItem.ToString() == "Net Calories")
-            {
-                for (int i = 0; i < dailyProgrammes.Count; i++)
-                {
-                    if (dailyProgrammes[i].Year == currentDate.Year && dailyProgrammes[i].Month == currentDate.Month && dailyProgrammes[i].Day <= currentDate.Day)
-                    {
-                        chart1.Series["Chart"].Points.AddXY(dailyProgrammes[i].Day + "/" + dailyProgrammes[i].Month + "/" + dailyProgrammes[i].Year, dailyProgrammes[i].NetCal);
-                    }
-                }
-            }
+            
         }
 
         private void btnGetReport_Click(object sender, EventArgs e)

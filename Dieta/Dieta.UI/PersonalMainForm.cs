@@ -42,7 +42,7 @@ namespace Dieta.UI
             double netCalories = 0;
             DateTime date = DateTime.Today;
             dailyProgramme = context.DailyProgrammes.Where(dp => dp.UserId == User.Id && dp.Day == date.Day && dp.Month == date.Month && dp.Year == date.Year).SingleOrDefault();
-            if (dailyProgramme!=null)
+            if (dailyProgramme != null)
             {
                 GetCalories(out goalOfCalories, out remainingCalories, out totalCalories, out burnedCalories, out netCalories, dailyProgramme);
                 ReWriteCalories(goalOfCalories, remainingCalories, totalCalories, burnedCalories, netCalories);
@@ -55,7 +55,7 @@ namespace Dieta.UI
                     Day = date.Day,
                     Month = date.Month,
                     Year = date.Year,
-                    GoalOfCal = DietaController.CalculateBMR(User.Gender == "Male" ? 0 : 1, User.Weight, User.Height,User.Age,User.ActivityLevelId,User.GoalId),
+                    GoalOfCal = DietaController.CalculateBMR(User.Gender == "Male" ? 0 : 1, User.Weight, User.Height, User.Age, User.ActivityLevelId, User.GoalId),
                     TotalCal = 0,
                     TotalBurnedCal = 0,
                     NetCal = 0,
@@ -66,18 +66,25 @@ namespace Dieta.UI
                 totalCalories = Convert.ToInt32(dailyProgramme.TotalCal);
                 burnedCalories = Convert.ToInt32(dailyProgramme.TotalBurnedCal);
                 netCalories = Convert.ToInt32(dailyProgramme.NetCal);
+                context.DailyProgrammes.Add(dailyProgramme);
+                context.SaveChanges();
                 GetCalories(out goalOfCalories, out remainingCalories, out totalCalories, out burnedCalories, out netCalories, dailyProgramme);
                 ReWriteCalories(goalOfCalories, remainingCalories, totalCalories, burnedCalories, netCalories);
                 RefreshProgressBar(context.DailyProgrammes.Where(dp => dp.Id == dailyProgramme.Id).FirstOrDefault().GoalOfCal, context.DailyProgrammes.Where(dp => dp.Id == dailyProgramme.Id).FirstOrDefault().NetCal);
-                context.DailyProgrammes.Add(dailyProgramme);
-                context.SaveChanges();
             }
         }
 
         private void RefreshProgressBar(double goalOfCalories, double netCalories)
         {
             progressBarCurrentCal.Maximum = Convert.ToInt32(goalOfCalories);
-            progressBarCurrentCal.Value = Convert.ToInt32(netCalories);
+            if (netCalories > 0 && netCalories <= goalOfCalories)
+            {
+                progressBarCurrentCal.Value = Convert.ToInt32(netCalories);
+            }
+            else if (netCalories > goalOfCalories)
+            {
+                progressBarCurrentCal.Value = progressBarCurrentCal.Maximum;
+            }
             lblCurrentProgress.Text = Convert.ToInt32(netCalories).ToString();
         }
 
@@ -101,7 +108,7 @@ namespace Dieta.UI
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-            AddFoodForm addFoodForm = new AddFoodForm(dailyProgramme,User);
+            AddFoodForm addFoodForm = new AddFoodForm(dailyProgramme, User);
             addFoodForm.Show();
             this.Hide();
         }

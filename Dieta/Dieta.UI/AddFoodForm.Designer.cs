@@ -355,7 +355,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddFoodForm";
             this.Text = "AddFoodForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddFoodForm_FormClosing);
             this.Load += new System.EventHandler(this.AddFoodForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddedFoods)).EndInit();

@@ -38,3 +38,13 @@ C:\GitHubProjects\DietaLast\DietaLast\Dieta\Dieta.Model\obj\Debug\Dieta.Model.cs
 C:\GitHubProjects\DietaLast\DietaLast\Dieta\Dieta.Model\obj\Debug\Dieta.Model.csproj.CopyComplete
 C:\GitHubProjects\DietaLast\DietaLast\Dieta\Dieta.Model\obj\Debug\Dieta.Model.dll
 C:\GitHubProjects\DietaLast\DietaLast\Dieta\Dieta.Model\obj\Debug\Dieta.Model.pdb
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\bin\Debug\Dieta.Model.dll
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\bin\Debug\Dieta.Model.pdb
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\bin\Debug\DataAnnotationsExtensions.dll
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\bin\Debug\Dieta.BLL.dll
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\bin\Debug\Dieta.BLL.pdb
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\obj\Debug\Dieta.Model.csproj.AssemblyReference.cache
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\obj\Debug\Dieta.Model.csproj.CoreCompileInputs.cache
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\obj\Debug\Dieta.Model.csproj.CopyComplete
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\obj\Debug\Dieta.Model.dll
+C:\GitHubProjects\DietaProject\DietaProject\Dieta\Dieta.Model\obj\Debug\Dieta.Model.pdb

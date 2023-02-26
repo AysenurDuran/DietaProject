@@ -58,7 +58,6 @@ namespace Dieta.UI
         {
             try
             {
-                chart1.Series.Clear();
                 DateTime currentDate = DateTime.Now.Date;
                 List<DailyProgramme> dailyProgrammes = Context.DailyProgrammes.Where(dp => dp.UserId == User.Id).ToList();
                 if (cmbReports.SelectedItem.ToString() == "Calories")
